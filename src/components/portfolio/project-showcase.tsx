@@ -65,7 +65,24 @@ const projects = [
     github: "https://github.com/Zeddli/autopilot",
     icon: "🤖"
   },
-  
+  {
+    id: 4,
+    title: "lookups API",
+    description: "A modern, maintainable API for Topcoder reference data, now powered by NestJS, TypeScript, Prisma, and PostgreSQL",
+    shortDesc: "Topcoder reference data API",
+    technologies: ["Nest JS", "TypeScript", "PostgreSQL", "Prisma", "Docker", "Kubernetes"],
+    category: "Backend",
+    status: "Client work",
+    year: "2025",
+    stats: {
+      users: "10",
+      rating: 5,
+      views: "100"
+    },
+    gradient: "from-indigo-500 via-purple-500 to-pink-500",
+    liveDemo: "",
+    github: "https://github.com/Zeddli/lookups"
+  }
 ]
 
 type Project = {
