@@ -81,7 +81,8 @@ const projects = [
     },
     gradient: "from-indigo-500 via-purple-500 to-pink-500",
     liveDemo: "",
-    github: "https://github.com/Zeddli/lookups"
+    github: "https://github.com/Zeddli/lookups",
+    icon: "💻"
   }
 ]
 
