@@ -8,10 +8,8 @@ import { Badge } from "@/components/ui/badge";
 import { 
   Code2, 
   Rocket, 
-  Coffee, 
   Heart, 
   Zap,
-  Users, 
   Calendar,
   ArrowRight,
   Sparkles,
@@ -30,10 +28,8 @@ export const AboutMeSection = () => {
   const isInView = useInView(containerRef, { once: true });
 
   const stats = [
-    { icon: Calendar, label: "Years Experience", value: 3, suffix: "+" },
-    { icon: Code2, label: "Projects Completed", value: 23, suffix: "+" },
-    { icon: Users, label: "Happy Clients", value: 20, suffix: "+" },
-    { icon: Coffee, label: "Cups of Coffee", value: 40, suffix: "" }
+    { icon: Calendar, label: "Years Experience", value: 2, suffix: "+" },
+    { icon: Code2, label: "Projects Completed", value: 23, suffix: "+" }
   ];
 
   const cards = [
@@ -74,16 +70,16 @@ export const AboutMeSection = () => {
   const skills = [
     { name: "React/Next.js", level: 95, color: "bg-blue-500" },
     { name: "TypeScript", level: 90, color: "bg-blue-600" },
-    { name: "Node.js/Express js/NextJS", level: 85, color: "bg-green-500" },
-    { name: "Go", level: 80, color: "bg-yellow-500" },
+    { name: "Node.js/Express js", level: 85, color: "bg-green-500" },
+    { name: "Nest JS", level: 80, color: "bg-yellow-500" },
     { name: "Postgres", level: 88, color: "bg-purple-500" },
-    { name: "Eino Framework", level: 75, color: "bg-pink-500" }
+    { name: "PHP", level: 75, color: "bg-pink-500" }
   ];
 
   const typewriterTexts = [
     "Full-Stack Developer",
-    "AI Enthusiast",
-    "Open Source Contributor"
+    "Web3 Enthusiast",
+    "Data Analytics Student"
   ];
 
   useEffect(() => {
@@ -228,7 +224,7 @@ export const AboutMeSection = () => {
           variants={{
             visible: { opacity: 1, y: 0, transition: { delay: 0.3, duration: 0.8 } }
           }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20"
+          className="flex justify-center gap-8 mb-20"
         >
           {stats.map((stat) => (
             <motion.div
