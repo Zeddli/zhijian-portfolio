@@ -83,6 +83,25 @@ const projects = [
     liveDemo: "",
     github: "https://github.com/Zeddli/lookups",
     icon: "💻"
+  },
+  {
+    id: 5,
+    title: "Restaurant landing page",
+    description: "A restaurant landing page built with Next.js, TypeScript, and Tailwind CSS. It features a responsive design, animated elements, and a contact form.",
+    shortDesc: "Modern restaurant landing page",
+    technologies: ["Next JS", "TypeScript", "Tailwind CSS"],
+    category: "Frontend",
+    status: "Live",
+    year: "2025",
+    stats: {
+      users: "5",
+      rating: 5,
+      views: "10"
+    },
+    gradient: "from-indigo-500 via-purple-500 to-pink-500",
+    liveDemo: "https://bella-vista-tau.vercel.app/",
+    github: "",
+    icon: "🍔"
   }
 ]
 
