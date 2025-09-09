@@ -409,7 +409,7 @@ export const AboutMeSection = () => {
               
               <h3 className="text-3xl font-bold text-primary mb-6">My Philosophy</h3>
               
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
                 Great software is born from the intersection of <span className="text-accent font-semibold">technical excellence</span> and 
                 <span className="text-accent font-semibold"> human empathy</span>. Every line of code I write, every interface I design, 
                 and every problem I solve is guided by one simple principle: <span className="text-primary font-semibold">

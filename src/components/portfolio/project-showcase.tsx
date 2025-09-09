@@ -22,7 +22,7 @@ const projects = [
       rating: 5,
       views: "20+"
     },
-    gradient: "from-purple-500 via-pink-500 to-red-500",
+    gradient: "from-emerald-600 via-emerald-500 to-emerald-700",
     liveDemo: "https://megahack-omega.vercel.app/",
     github: "https://github.com/Zeddli/megahack",
     icon: "🌾"
@@ -41,7 +41,7 @@ const projects = [
       rating: 5,
       views: "23"
     },
-    gradient: "from-blue-500 via-cyan-500 to-green-500",
+    gradient: "from-emerald-600 via-emerald-500 to-emerald-700",
     liveDemo: "https://solgraph-analyse.vercel.app/",
     github: "https://github.com/Zeddli/solgraph",
     icon: "🔍"
@@ -60,7 +60,7 @@ const projects = [
       rating: 4.7,
       views: "100K+"
     },
-    gradient: "from-green-500 via-teal-500 to-blue-500",
+    gradient: "from-emerald-600 via-emerald-500 to-emerald-700",
     liveDemo: "",
     github: "https://github.com/Zeddli/autopilot",
     icon: "🤖"
@@ -79,7 +79,7 @@ const projects = [
       rating: 5,
       views: "100"
     },
-    gradient: "from-indigo-500 via-purple-500 to-pink-500",
+    gradient: "from-emerald-600 via-emerald-500 to-emerald-700",
     liveDemo: "",
     github: "https://github.com/Zeddli/lookups",
     icon: "💻"
@@ -98,7 +98,7 @@ const projects = [
       rating: 5,
       views: "10"
     },
-    gradient: "from-indigo-500 via-purple-500 to-pink-500",
+    gradient: "from-emerald-600 via-emerald-500 to-emerald-700",
     liveDemo: "https://bella-vista-tau.vercel.app/",
     github: "",
     icon: "🍔"
@@ -236,10 +236,10 @@ const ProjectCard = ({ project, index }: { project: Project, index: number }) =>
               <div>
                 <div className="flex items-center gap-2 mb-1">
                   <span className={`w-2 h-2 rounded-full ${getStatusColor(project.status)}`} />
-                  <span className="text-white/80 text-sm">{project.status}</span>
-                  <span className="text-white/60 text-sm">• {project.year}</span>
+                  <span className="text-gray-200 text-sm">{project.status}</span>
+                  <span className="text-gray-400 text-sm">• {project.year}</span>
                 </div>
-                <Badge variant="secondary" className="bg-white/20 text-white/90 border-0">
+                <Badge variant="secondary" className="bg-emerald-500/20 text-white border-emerald-400/30">
                   {project.category}
                 </Badge>
               </div>
@@ -249,18 +249,18 @@ const ProjectCard = ({ project, index }: { project: Project, index: number }) =>
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setShowPreview(!showPreview)}
-              className="p-2 bg-white/20 rounded-full text-white hover:bg-white/30 transition-colors"
+              className="p-2 bg-emerald-500/20 rounded-full text-white hover:bg-emerald-500/30 transition-colors"
             >
               <Eye className="w-4 h-4" />
             </motion.button>
           </div>
 
           {/* Title and Description */}
-          <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-white/90 transition-colors">
+          <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-gray-100 transition-colors">
             {project.title}
           </h3>
           
-          <p className="text-white/80 text-sm mb-2 font-medium">
+          <p className="text-gray-100 text-sm mb-2 font-medium">
             {project.shortDesc}
           </p>
           
@@ -270,31 +270,14 @@ const ProjectCard = ({ project, index }: { project: Project, index: number }) =>
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                className="text-white/70 text-sm mb-6 leading-relaxed"
+                className="text-gray-300 text-sm mb-6 leading-relaxed"
               >
                 {project.description}
               </motion.p>
             )}
           </AnimatePresence>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 mb-6">
-            <div className="text-center p-3 bg-white/10 rounded-lg backdrop-blur-sm">
-              <div className="text-white font-bold text-lg">{project.stats.users}</div>
-              <div className="text-white/60 text-xs">Users</div>
-            </div>
-            <div className="text-center p-3 bg-white/10 rounded-lg backdrop-blur-sm">
-              <div className="text-white font-bold text-lg flex items-center justify-center gap-1">
-                <Star className="w-4 h-4 text-yellow-300 fill-current" />
-                {project.stats.rating}
-              </div>
-              <div className="text-white/60 text-xs">Rating</div>
-            </div>
-            <div className="text-center p-3 bg-white/10 rounded-lg backdrop-blur-sm">
-              <div className="text-white font-bold text-lg">{project.stats.views}</div>
-              <div className="text-white/60 text-xs">Views</div>
-            </div>
-          </div>
+          {/* Stats removed by request */}
 
           {/* Technologies */}
           <div className="flex flex-wrap gap-2 mb-6">
@@ -307,14 +290,14 @@ const ProjectCard = ({ project, index }: { project: Project, index: number }) =>
               >
                 <Badge 
                   variant="outline" 
-                  className="bg-white/10 text-white/90 border-white/20 text-xs hover:bg-white/20 transition-colors"
+                  className="bg-emerald-500/10 text-white border-emerald-400/30 text-xs hover:bg-emerald-500/20 transition-colors"
                 >
                   {tech}
                 </Badge>
               </motion.div>
             ))}
             {!isHovered && project.technologies.length > 4 && (
-              <Badge variant="outline" className="bg-white/10 text-white/60 border-white/20 text-xs">
+              <Badge variant="outline" className="bg-emerald-500/10 text-white/80 border-emerald-400/30 text-xs">
                 +{project.technologies.length - 4}
               </Badge>
             )}
@@ -330,7 +313,7 @@ const ProjectCard = ({ project, index }: { project: Project, index: number }) =>
               <Button
                 asChild
                 size="sm"
-                className="flex-1 bg-white/20 hover:bg-white/30 text-white border-0 backdrop-blur-sm group/btn"
+                className="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white border-0 backdrop-blur-sm group/btn"
               >
                 <a 
                   href={project.liveDemo}
@@ -348,7 +331,7 @@ const ProjectCard = ({ project, index }: { project: Project, index: number }) =>
                 asChild
                 variant="outline"
                 size="sm"
-                className="bg-transparent border-white/30 text-white hover:bg-white/10 hover:border-white/50"
+                className="bg-transparent border-emerald-400/40 text-white hover:bg-emerald-500/10 hover:border-emerald-400/60"
               >
                 <a 
                   href={project.github}
@@ -365,7 +348,7 @@ const ProjectCard = ({ project, index }: { project: Project, index: number }) =>
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="flex items-center justify-between text-white/60 text-xs"
+              className="flex items-center justify-between text-gray-400 text-xs"
             >
               <div className="flex items-center gap-2">
                 <Code className="w-3 h-3" />
@@ -383,7 +366,7 @@ const ProjectCard = ({ project, index }: { project: Project, index: number }) =>
         <motion.div
           className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           style={{
-            background: `linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent)`,
+            background: `linear-gradient(45deg, transparent, rgba(16,185,129,0.2), transparent)`,
             backgroundSize: '200% 200%',
           }}
           animate={{
@@ -404,12 +387,12 @@ export default function ProjectShowcase() {
   const isInView = useInView(sectionRef, { once: true })
 
   return (
-    <section id='projects' ref={sectionRef} className="py-20 px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+    <section id='projects' ref={sectionRef} className="py-20 px-6 lg:px-8 bg-white relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-cyan-500/5 to-purple-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-20 w-72 h-72 bg-emerald-200/30 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-emerald-300/30 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-emerald-200/20 to-emerald-300/20 rounded-full blur-3xl" />
       </div>
 
       <div className="mx-auto max-w-7xl relative z-10">
@@ -427,14 +410,14 @@ export default function ProjectShowcase() {
             transition={{ delay: 0.2 }}
           >
             <Sparkles className="w-8 h-8 text-yellow-400" />
-            <h2 className="text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
+            <h2 className="text-6xl font-bold text-primary">
               Featured Projects
             </h2>
             <Sparkles className="w-8 h-8 text-yellow-400" />
           </motion.div>
           
           <motion.p 
-            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4 }}
@@ -449,15 +432,15 @@ export default function ProjectShowcase() {
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.6 }}
           >
-            <div className="flex items-center gap-2 text-gray-400">
+            <div className="flex items-center gap-2 text-gray-600">
               <div className="w-3 h-3 bg-green-500 rounded-full" />
               <span className="text-sm">Live Projects</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-400">
+            <div className="flex items-center gap-2 text-gray-600">
               <Github className="w-4 h-4" />
               <span className="text-sm">Open Source</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-400">
+            <div className="flex items-center gap-2 text-gray-600">
               <Star className="w-4 h-4 text-yellow-400" />
               <span className="text-sm">Featured Work</span>
             </div>
@@ -480,7 +463,7 @@ export default function ProjectShowcase() {
         >
           <Button 
             size="lg"
-            className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white border-0 px-8 py-4 text-lg font-medium group"
+            className="bg-emerald-600 hover:bg-emerald-500 text-white border-0 px-8 py-4 text-lg font-medium group"
             onClick={() => window.open("https://github.com/Zeddli")}
           >
             <Github className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
